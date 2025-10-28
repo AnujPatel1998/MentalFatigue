@@ -1,0 +1,3 @@
+filename,location,lines,description
+text_fatigue_model.py,backend/models/,111,Text-based fatigue detection using NLP
+voice_fatigue_model.py,backend/models/,108,Voice-based fatigue detection from audio
