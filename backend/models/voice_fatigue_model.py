@@ -105,3 +105,18 @@ class VoiceFatigueAnalyzer:
         os.makedirs(os.path.dirname(path), exist_ok=True)
         with open(path, 'wb') as f:
             pickle.dump(self.model, f)
+
+
+# Save to CSV for download
+import pandas as pd
+
+files_data = {
+    'filename': ['text_fatigue_model.py', 'voice_fatigue_model.py'],
+    'location': ['backend/models/', 'backend/models/'],
+    'lines': [len(text_model.split('\n')), len(voice_model.split('\n'))],
+    'description': ['Text-based fatigue detection using NLP', 'Voice-based fatigue detection from audio']
+}
+
+df = pd.DataFrame(files_data)
+df.to_csv('model_files_summary.csv', index=False)
+print("\n✓ Model files summary saved to CSV")
