@@ -15,8 +15,8 @@ import os
 from pathlib import Path
 
 # Import model modules
-from models.text_fatigue_model import TextFatigueAnalyzer
-from models.voice_fatigue_model import VoiceFatigueAnalyzer
+from models.text_fatigue_model_UPDATED import TextFatigueAnalyzer
+from models.voice_fatigue_model_UPDATED import VoiceFatigueAnalyzer
 from models.trend_forecasting import TrendForecaster
 from utils.text_processor import TextProcessor
 from utils.voice_processor import VoiceProcessor
